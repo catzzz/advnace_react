@@ -30,7 +30,7 @@ it('can fetch a list of comments and display them', (done) =>{
     
     // introduce a tiny little pause
 
-    setTimeout(()=>{
+    moxios.wait(()=>{
         // update ui
         wrapped.update();
          // Expect to find a list fo comments
@@ -39,7 +39,7 @@ it('can fetch a list of comments and display them', (done) =>{
         // signal done to finish test;
         done();
         wrapped.unmount();
-    }, 100)
+    })
 
    
 
